@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Ejer6KotTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    
+
                 }
             }
         }
@@ -30,38 +30,65 @@ class MainActivity : ComponentActivity() {
 fun main() {
 
 
-    var cuenta1 = CuentaBancaria("Cuenta Vivienda", 1000.0)
-    var cuenta2 = CuentaBancaria("Cuenta Corriente", 1500.0)
-    var cuenta3 = CuentaBancaria("Cuenta Ahorros", 500.0)
+    var cuenta1 = CuentaBancaria("Cuenta Vivienda", 200.000)
+    var cuenta2 = CuentaBancaria("Cuenta Corriente", 350.000)
+    var cuenta3 = CuentaBancaria("Cuenta Ahorros", 159.000)
 
 // cta1
+    println("")
+    println("...................................")
+    println(".......Historico de Cuenta1........")
     cuenta1.deposito(200.000)
     cuenta1.retiro(150.000)
-    cuenta1.retiro(1200.000)  // Retiro fallido
+    cuenta1.retiro(120.000)  // Retiro fallido
     cuenta1.deposito(80.000)
     cuenta1.retiro(100.000)
 
 // cta2
+    println("")
+    println("...................................")
+    println(".......Historico de Cuenta2........")
     cuenta2.deposito(50.000)
     cuenta2.retiro(300.000)
-    cuenta2.retiro(1000.000)  // Retiro fallido
-    cuenta2.deposito(800.000)
-    cuenta2.retiro(240.000)
+    cuenta2.retiro(100.000)  // Retiro fallido
+    cuenta2.deposito(80.000)
+    cuenta2.retiro(40.000)
 
     // cta3
+    println("")
+    println("...................................")
+    println(".......Historico de Cuenta3........")
     cuenta3.deposito(158.000)
     cuenta3.retiro(120.000)
-    cuenta3.retiro(600.000)  // Retiro fallido
+    cuenta3.retiro(300.000)  // Retiro fallido
     cuenta3.deposito(350.000)
     cuenta3.retiro(50.000)
 
+
+
+    println("")
+    println("...................................")
+    println(".......*** Hoja 2 ***........")
+
+
     // Mostrar saldos y historiales
+    println("")
+    println("...................................")
+    println(".......Historia de saldo cuenta1........")
     cuenta1.mostrarSaldo()
     cuenta1.mostrarHistorial()
 
+
+    println("")
+    println("...................................")
+    println(".......Historia de saldo cuenta2........")
     cuenta2.mostrarSaldo()
     cuenta2.mostrarHistorial()
 
+
+    println("")
+    println("...................................")
+    println(".......Historia de saldo cuenta3........")
     cuenta3.mostrarSaldo()
     cuenta3.mostrarHistorial()
 }
